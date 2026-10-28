@@ -14,16 +14,9 @@ android {
         versionCode = 5
         versionName = "3.0.0"
     }
-    signingConfigs {
-        create("yara") {
-            storeFile = file("yara-debug.keystore")
-            storePassword = "android"
-            keyAlias = "yara"
-            keyPassword = "android"
-        }
-    }
     buildTypes {
-        debug { signingConfig = signingConfigs.getByName("yara") }
+        debug {
+        }
         release { isMinifyEnabled = false }
     }
     compileOptions {
